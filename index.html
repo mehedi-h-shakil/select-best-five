@@ -49,7 +49,8 @@
                                 <h2 class="text-2xl font-medium text-center">lionel Messi</h2>
                                 <p class="text-center">36 Goals | 120 Assist</p>
                                 <div class="card-actions">
-                                    <button class=" w-full text-white py-2" style="background-color: #015196;">Buy
+                                    <button class=" w-full text-white py-2" style="background-color: #015196;"
+                                        onclick="addToSelected(this)">Buy
                                         Now</button>
                                 </div>
                             </div>
@@ -60,7 +61,8 @@
                                 <h2 class="text-2xl font-medium text-center">Neymar Jr</h2>
                                 <p class="text-center">36 Goals | 120 Assist</p>
                                 <div class="card-actions">
-                                    <button class=" w-full text-white py-2" style="background-color: #015196;">Buy
+                                    <button class=" w-full text-white py-2" style="background-color: #015196;"
+                                        onclick="addToSelected(this)">Buy
                                         Now</button>
                                 </div>
                             </div>
@@ -71,7 +73,8 @@
                                 <h2 class="text-2xl font-medium text-center">Kylian Mbappé</h2>
                                 <p class="text-center">36 Goals | 120 Assist</p>
                                 <div class="card-actions">
-                                    <button class=" w-full text-white py-2" style="background-color: #015196;">Buy
+                                    <button class=" w-full text-white py-2" style="background-color: #015196;"
+                                        onclick="addToSelected(this)">Buy
                                         Now</button>
                                 </div>
                             </div>
@@ -82,7 +85,8 @@
                                 <h2 class="text-2xl font-medium text-center">Vítor Machado</h2>
                                 <p class="text-center">36 Goals | 120 Assist</p>
                                 <div class="card-actions">
-                                    <button class=" w-full text-white py-2" style="background-color: #015196;">Buy
+                                    <button class=" w-full text-white py-2" style="background-color: #015196;"
+                                        onclick="addToSelected(this)">Buy
                                         Now</button>
                                 </div>
                             </div>
@@ -93,7 +97,8 @@
                                 <h2 class="text-2xl font-medium text-center">Sergio Ramos</h2>
                                 <p class="text-center">36 Goals | 120 Assist</p>
                                 <div class="card-actions">
-                                    <button class=" w-full text-white py-2" style="background-color: #015196;">Buy
+                                    <button class=" w-full text-white py-2" style="background-color: #015196;"
+                                        onclick="addToSelected(this)">Buy
                                         Now</button>
                                 </div>
                             </div>
@@ -104,7 +109,8 @@
                                 <h2 class="text-2xl font-medium text-center">Renato Sanches</h2>
                                 <p class="text-center">36 Goals | 120 Assist</p>
                                 <div class="card-actions">
-                                    <button class=" w-full text-white py-2" style="background-color: #015196;">Buy
+                                    <button class=" w-full text-white py-2" style="background-color: #015196;"
+                                        onclick="addToSelected(this)">Buy
                                         Now</button>
                                 </div>
                             </div>
@@ -113,42 +119,50 @@
                 </div>
                 <div class="...">
                     <div class="grid grid-cols-1 gap-5">
-                        <div class="selected-five bg-black w-full h-96">
+                        <div class="selected-five bg-black w-full h-80">
                             <h2 class="text-3xl font-semibold text-center mt-5">Selected V</h2>
                             <img class="mx-auto" src="images/underline.png" alt="">
-
+                            <table class=" w-full mt-5">
+                                <tbody id="selected-five">
+                                </tbody>
+                            </table>
                         </div>
                         <div class="selected-five bg-black w-full h-full pb-10">
-                            <h2 class="text-3xl font-semibold text-center mt-5">Budget</h2>
+                            <h2 class="text-3xl font-semibold text-center mt-5">Budget <span style="display: none;"
+                                    id="total-player">0</span>
+                            </h2>
                             <img class="mx-auto" src="images/underline.png" alt="">
                             <div class="grid grid-cols-2 mt-5">
                                 <h3 class="text-center">Per Player</h3>
-                                <input class="bg-black w-24 py-1 px-2 text-white border border-white" type="text">
+                                <input id="per-player-field"
+                                    class="bg-black w-24 py-1 px-2 text-white border border-white" type="text">
                             </div>
                             <div class="mt-5 card-actions">
-                                <button class="w-80 mx-auto text-white py-2"
+                                <button class="w-80 mx-auto text-white py-2" id="btn-calculate"
                                     style="background-color: #015196;">Calculate</button>
                             </div>
                             <div class="grid grid-cols-2 mt-5">
                                 <h3 class="text-center">Player Expenses</h3>
-                                <h3 class="text-center">0</h3>
+                                <h3 class="text-center" id="player-expenses">0</h3>
 
                             </div>
                             <div class="grid grid-cols-2 mt-5">
                                 <h3 class="text-center">Manager</h3>
-                                <input class="bg-black w-24 py-1 px-2 text-white border border-white" type="text">
+                                <input id="manager-field" class="bg-black w-24 py-1 px-2 text-white border border-white"
+                                    type="text">
                             </div>
                             <div class="grid grid-cols-2 mt-5">
                                 <h3 class="text-center">Coach</h3>
-                                <input class="bg-black w-24 py-1 px-2 text-white border border-white" type="text">
+                                <input id="coach-field" class="bg-black w-24 py-1 px-2 text-white border border-white"
+                                    type="text">
                             </div>
                             <div class="mt-5 card-actions">
-                                <button class="w-80 mx-auto text-white py-2"
+                                <button class="w-80 mx-auto text-white py-2" id="btn-total-calculate"
                                     style="background-color: #015196;">Calculate Total</button>
                             </div>
                             <div class="grid grid-cols-2 mt-5">
                                 <h3 class="text-center">Total</h3>
-                                <h3 class="text-center" style="color: #FF5E19;">0</h3>
+                                <h3 id="total-amount" class="text-center" style="color: #FF5E19;">0</h3>
 
                             </div>
                         </div>
@@ -158,6 +172,8 @@
             </div>
         </section>
     </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/player.js"></script>
 </body>
 
 </html>
