@@ -2,3 +2,16 @@
     background-image: url(images/Rectangle\ 56.png);
     height: 500px;
 }
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.football-background {
+    background-image: url(images/Rectangle\ 57.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
