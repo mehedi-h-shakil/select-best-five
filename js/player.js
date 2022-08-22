@@ -1,6 +1,9 @@
 const playerArray = [];
 
-function display(playerName) {
+// created this function for selected player display with table
+
+/*------------
+ function display(playerName) {
     const tableBody = document.getElementById('selected-five');
     if (playerArray.length > 5) {
         alert("You can not add more than five players");
@@ -21,6 +24,28 @@ function display(playerName) {
     }
 
 }
+-------------*/
+
+function display(playerName) {
+    const olList = document.getElementById('selected');
+    if (playerArray.length > 5) {
+        alert()
+        return;
+    }
+    olList.innerHTML = "";
+    for (let i = 0; i < playerName.length; i++) {
+        const name = playerName[i].playerName;
+
+        const ol = document.createElement("ol");
+
+        ol.innerHTML = `
+        <li>${i + 1}. ${name}</li>
+        `;
+
+        olList.appendChild(ol);
+    }
+}
+
 function addToSelected(element) {
     element.disabled = true;
     element.style.backgroundColor = "grey";
@@ -40,7 +65,8 @@ function addToSelected(element) {
 document.getElementById('btn-calculate').addEventListener('click', function () {
     const perPlayer = getElementValueById('per-player-field');
 
-    const players = document.getElementById('selected-five');
+    // const players = document.getElementById('selected-five');
+    const players = document.getElementById('selected');
     const player = players.children.length;
 
     if (isNaN(perPlayer)) {
