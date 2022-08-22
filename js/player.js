@@ -19,10 +19,14 @@ function display(playerName) {
 
         tableBody.appendChild(tr);
     }
+
 }
 
 
 function addToSelected(element) {
+    element.disabled = true;
+    element.backgroundColor = "grey";
+
     const playerName = element.parentNode.parentNode.children[0].innerText;
 
     const playerObj = {
@@ -31,13 +35,13 @@ function addToSelected(element) {
 
     playerArray.push(playerObj);
 
+
     const player = playerArray.length;
     const totalPlayer = document.getElementById('total-player');
     totalPlayer.innerText = player;
 
     display(playerArray);
 
-    buttonDisabled();
 }
 
 document.getElementById('btn-calculate').addEventListener('click', function () {
