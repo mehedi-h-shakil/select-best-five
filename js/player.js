@@ -14,7 +14,7 @@ function display(playerName) {
 
         tr.innerHTML = `
         <th>${i + 1}</th>
-        <td>${name}</td>
+        <th>${name}</th>
         `;
 
         tableBody.appendChild(tr);
