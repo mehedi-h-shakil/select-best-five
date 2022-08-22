@@ -25,8 +25,7 @@ function display(playerName) {
 
 function addToSelected(element) {
     element.disabled = true;
-    element.backgroundColor = "grey";
-
+    element.style.backgroundColor = "grey";
     const playerName = element.parentNode.parentNode.children[0].innerText;
 
     const playerObj = {
