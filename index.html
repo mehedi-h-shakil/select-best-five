@@ -110,7 +110,7 @@
                                 <p class="text-center">36 Goals | 120 Assist</p>
                                 <div class="card-actions">
                                     <button class=" w-full text-white py-2" style="background-color: #015196;"
-                                        onclick="addToSelected(this)">Buy
+                                        onclick="addToSelected(this); this.disabled = true;">Buy
                                         Now</button>
                                 </div>
                             </div>
@@ -119,7 +119,7 @@
                 </div>
                 <div class="...">
                     <div class="grid grid-cols-1 gap-5">
-                        <div class="selected-five bg-black w-full h-80">
+                        <div class="selected-five bg-black w-72 h-80">
                             <h2 class="text-3xl font-semibold text-center mt-5">Selected V</h2>
                             <img class="mx-auto" src="images/underline.png" alt="">
                             <table class=" w-full mt-5">
@@ -127,7 +127,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="selected-five bg-black w-full h-full pb-10">
+                        <div class="selected-five bg-black w-72 h-full pb-10">
                             <h2 class="text-3xl font-semibold text-center mt-5">Budget <span style="display: none;"
                                     id="total-player">0</span>
                             </h2>
@@ -138,7 +138,7 @@
                                     class="bg-black w-24 py-1 px-2 text-white border border-white" type="text">
                             </div>
                             <div class="mt-5 card-actions">
-                                <button class="w-80 mx-auto text-white py-2" id="btn-calculate"
+                                <button class="w-64 mx-auto text-white py-2" id="btn-calculate"
                                     style="background-color: #015196;">Calculate</button>
                             </div>
                             <div class="grid grid-cols-2 mt-5">
@@ -157,7 +157,7 @@
                                     type="text">
                             </div>
                             <div class="mt-5 card-actions">
-                                <button class="w-80 mx-auto text-white py-2" id="btn-total-calculate"
+                                <button class="w-64 mx-auto text-white py-2" id="btn-total-calculate"
                                     style="background-color: #015196;">Calculate Total</button>
                             </div>
                             <div class="grid grid-cols-2 mt-5">

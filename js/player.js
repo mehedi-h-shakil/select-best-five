@@ -2,6 +2,10 @@ const playerArray = [];
 
 function display(playerName) {
     const tableBody = document.getElementById('selected-five');
+    if (playerArray.length > 5) {
+        alert("You can not add more than five players");
+        return;
+    }
     tableBody.innerHTML = "";
     for (let i = 0; i < playerName.length; i++) {
         const name = playerName[i].playerName;
@@ -12,9 +16,11 @@ function display(playerName) {
         <th>${i + 1}</th>
         <td>${name}</td>
         `;
+
         tableBody.appendChild(tr);
     }
 }
+
 
 function addToSelected(element) {
     const playerName = element.parentNode.parentNode.children[0].innerText;
@@ -23,7 +29,6 @@ function addToSelected(element) {
         playerName: playerName
     }
 
-
     playerArray.push(playerObj);
 
     const player = playerArray.length;
@@ -31,6 +36,8 @@ function addToSelected(element) {
     totalPlayer.innerText = player;
 
     display(playerArray);
+
+    buttonDisabled();
 }
 
 document.getElementById('btn-calculate').addEventListener('click', function () {
