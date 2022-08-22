@@ -21,8 +21,6 @@ function display(playerName) {
     }
 
 }
-
-
 function addToSelected(element) {
     element.disabled = true;
     element.style.backgroundColor = "grey";
@@ -34,17 +32,13 @@ function addToSelected(element) {
 
     playerArray.push(playerObj);
 
-
-    const player = playerArray.length;
-    const totalPlayer = document.getElementById('total-player');
-    totalPlayer.innerText = player;
-
     display(playerArray);
+
 
 }
 
 document.getElementById('btn-calculate').addEventListener('click', function () {
-    const totalPlayer = document.getElementById('total-player').innerText;
+    const totalPlayer = 5;
     const perPlayer = getElementValueById('per-player-field');
     if (isNaN(perPlayer)) {
         alert("Please give amount in numbers");
