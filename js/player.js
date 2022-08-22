@@ -29,7 +29,7 @@ const playerArray = [];
 function display(playerName) {
     const olList = document.getElementById('selected');
     if (playerArray.length > 5) {
-        alert()
+        swal("You can not add more than five players")
         return;
     }
     olList.innerHTML = "";
@@ -59,7 +59,6 @@ function addToSelected(element) {
 
     display(playerArray);
 
-
 }
 
 document.getElementById('btn-calculate').addEventListener('click', function () {
@@ -70,7 +69,7 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
     const player = players.children.length;
 
     if (isNaN(perPlayer)) {
-        alert("Please give amount in numbers");
+        swal("Please give amount in numbers");
         return;
     }
     const cost = player * perPlayer;
@@ -81,7 +80,7 @@ document.getElementById('btn-total-calculate').addEventListener('click', functio
     const managerCost = getElementValueById('manager-field');
     const coachCost = getElementValueById('coach-field');
     if (isNaN(managerCost) || isNaN(coachCost)) {
-        alert("Please give amount in numbers");
+        swal("Please give amount in numbers");
         return;
     }
     const playerExpenses = document.getElementById('player-expenses');
