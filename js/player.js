@@ -38,13 +38,16 @@ function addToSelected(element) {
 }
 
 document.getElementById('btn-calculate').addEventListener('click', function () {
-    const totalPlayer = 5;
     const perPlayer = getElementValueById('per-player-field');
+
+    const players = document.getElementById('selected-five');
+    const player = players.children.length;
+
     if (isNaN(perPlayer)) {
         alert("Please give amount in numbers");
         return;
     }
-    const cost = totalPlayer * perPlayer;
+    const cost = player * perPlayer;
     setTextValueById('player-expenses', cost);
 })
 
